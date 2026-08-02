@@ -1,0 +1,77 @@
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+*.whl
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment / Secrets ────────────────────────────────────
+.env
+.env.*
+.env.local
+*.env
+CREDENTIALS
+secrets.*
+
+# ── Database ─────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.sql.dump
+*.dump
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
+*.log.*
+
+# ── Testing / Coverage ───────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+.tox/
+coverage.xml
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Docker ───────────────────────────────────────────────────
+.docker/
+
+# ── Node / Frontend (if added later) ─────────────────────────
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+
+# ── Celery ───────────────────────────────────────────────────
+celerybeat-schedule
+celerybeat.pid
+
+# ── Alembic ──────────────────────────────────────────────────
+# Keep alembic/versions/ tracked — migrations are important
