@@ -1,0 +1,22 @@
+[Unit]
+Description=Telemedicine FastAPI Service
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=telemedicine
+Group=telemedicine
+WorkingDirectory=/opt/telemedicine/backend
+EnvironmentFile=/etc/telemedicine.env
+ExecStart=/opt/telemedicine/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8003 --workers 1
+Restart=on-failure
+RestartSec=5
+MemoryMax=400M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
